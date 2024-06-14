@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OrgChartPage = () => {
-  const pdfUrl = '/src/assets/organigrama.pdf'; // Asegúrate de reemplazar con la ruta correcta
+  const pdfUrl = '/assets/organigrama.pdf';
 
   return (
     <div className="container mx-auto p-6">
