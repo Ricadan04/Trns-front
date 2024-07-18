@@ -8,7 +8,7 @@ const EmployeeListPage = () => {
   });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
 
   // Lista de opciones para el filtro de dirección
   const addressOptions = [

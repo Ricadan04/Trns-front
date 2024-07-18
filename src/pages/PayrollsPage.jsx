@@ -9,7 +9,7 @@ const PayrollsPage = () => {
   });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
 
   // Lista de opciones para el filtro de dirección
   const addressOptions = [
@@ -19,23 +19,6 @@ const PayrollsPage = () => {
     'Dirección de Planeación',
     'Dirección Administrativa',
     'Dirección Jurídica',
-  ];
-
-  // Lista de opciones para el filtro de mes
-  const monthOptions = [
-    { value: '', label: 'Seleccionar mes' },
-    { value: 'Enero', label: 'Enero' },
-    { value: 'Febrero', label: 'Febrero' },
-    { value: 'Marzo', label: 'Marzo' },
-    { value: 'Abril', label: 'Abril' },
-    { value: 'Mayo', label: 'Mayo' },
-    { value: 'Junio', label: 'Junio' },
-    { value: 'Julio', label: 'Julio' },
-    { value: 'Agosto', label: 'Agosto' },
-    { value: 'Septiembre', label: 'Septiembre' },
-    { value: 'Octubre', label: 'Octubre' },
-    { value: 'Noviembre', label: 'Noviembre' },
-    { value: 'Diciembre', label: 'Diciembre' },
   ];
 
   // Filtrar los datos según los filtros aplicados
@@ -100,25 +83,6 @@ const PayrollsPage = () => {
               {addressOptions.map((option, index) => (
                 <option key={index} value={option}>
                   {option}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="month" className="block text-sm font-medium text-gray-700">
-              Mes
-            </label>
-            <select
-              id="month"
-              name="month"
-              value={filters.month}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            >
-              {monthOptions.map((option, index) => (
-                <option key={index} value={option.value}>
-                  {option.label}
                 </option>
               ))}
             </select>
